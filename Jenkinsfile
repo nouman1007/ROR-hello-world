@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = sudo docker.build("ROR-hello-world")
+        app = sudo docker.build()
     }
 
     stage('Test image') {
