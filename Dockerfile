@@ -17,7 +17,7 @@ RUN gem install ffi -v '1.15.3' --source 'https://rubygems.org/'
 RUN gem install puma -v '5.3.2' --source  'https://rubygems.org/'
 RUN gem install sassc -v '2.4.0' --source 'https://rubygems.org/'
 RUN gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
-RUN rails webpacker:install
+RUN bundle exec rake webpacker:install
 RUN bundle install
 COPY . .
 # RUN bundle update
